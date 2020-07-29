@@ -21,7 +21,7 @@
 
     &__logo-text {
         margin-left: 45px;
-        width: 200px;
+        width: 275px;
         height: 25px;
         display: block;
         fill: #fff;
@@ -88,10 +88,26 @@
         }
     }
     &__menu-link {
+        position: relative;
         font-size: 24px;
         line-height: 32px;
         text-decoration: none;
         color: #fff;
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: #fff;
+            transition: .2s linear;
+        }
+        &:hover {
+            &:after {
+                width: 100%;
+            }
+        }
     }
     &__copyright {
         text-align: center;
@@ -128,7 +144,7 @@
     
         &__logo-text {
             margin-left: 45px;
-            width: 170px;
+            width: 200px;
             height: 20px;
             display: block;
             fill: #fff;

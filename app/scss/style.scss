@@ -6,6 +6,9 @@
 @import "blocks/intro";
 @import "blocks/blogs";
 @import "blocks/footer";
+@import "blocks/content";
+@import "blocks/about";
+@import "blocks/products";
 
 
 *:before,
@@ -30,4 +33,34 @@ body {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 15px;
+}
+
+.title {
+    margin-bottom: 50px;
+    text-align: center;
+    &__text {
+        margin-bottom: 20px;
+        font-family: 'Noto Serif JP', sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 36px;
+        line-height: 44px;
+        text-transform: capitalize;
+        color: #C30F23;
+        span {
+            position: relative;
+            padding-left: 15px;
+            &:after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                content: url(../img/sircle.svg);
+            }
+        }
+    }
+    &__subtext {
+        font-size: 18px;
+        line-height: 26px;
+        color: #464646;
+    }
 }
