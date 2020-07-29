@@ -1,0 +1,95 @@
+.nav {
+    position: relative;
+    height: 70px;
+    background: linear-gradient(180deg, #E64556 14.08%, #C30F23 52.34%, #820916 90.05%);
+    &__wrapper {
+        height: 70px;
+        position: relative;
+    }
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -15px;
+        li {
+            padding: 0 15px;
+            flex-basis: 20%;
+            text-align: center;
+            list-style: none;
+            border-left: 1px solid #C30F23;
+            border-right: 1px solid #C30F23;
+            padding: 25px 0px;
+        }
+    }
+
+    &__menu-link {
+        line-height: 20px;
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+    &__logo {
+        display: none;
+    }
+}
+
+.burger__menu {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 25px;
+    cursor: pointer;
+    &:before,&:after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        right: 0;
+        background-color: #fff;
+    }
+    &:before {
+        top: 0;
+    }
+    &:after {
+        bottom: 0;
+    }
+    span {
+        display: block;
+        width: 100%;
+        height: 3px;
+        position: absolute;
+        top: 11px;
+        right: 0;
+        background-color: #fff;
+    }
+}
+
+@media(max-width: 768px) {
+    .nav {
+        &__menu {
+            display: none;
+        }
+        &__logo {
+            display: flex;
+            align-items: center;
+        }
+        &__logo-icon {
+            display: block;
+            fill: #fff;
+            width: 21px;
+            height: 65px;
+        }
+        &__logo-text {
+            margin-left: 38px;
+            display: block;
+            fill: #fff;
+            width: 148px;
+            height: 14px;
+        }
+    }
+    .burger__menu {
+        display: block;
+    }
+}
