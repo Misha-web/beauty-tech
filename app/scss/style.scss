@@ -27,6 +27,9 @@ body {
     font-weight: 400;
     color: #fff;
     font-family: 'Noto Sans JP', sans-serif;
+    &.lock {
+        overflow: hidden;
+    }
 }
 
 .container {
@@ -62,5 +65,33 @@ body {
         font-size: 18px;
         line-height: 26px;
         color: #464646;
+    }
+}
+
+@media(max-width: 768px) {
+    .title {
+        margin-bottom: 40px;
+        &__text {
+            font-size: 30px;
+            line-height: 42px;
+        }
+        &__subtext {
+            font-size: 16px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media(max-width: 480px) {
+    .title {
+        margin-bottom: 30px;
+        &__text {
+            font-size: 28px;
+            line-height: 36px;
+        }
+        &__subtext {
+            font-size: 14px;
+            line-height: 22px;
+        }
     }
 }
