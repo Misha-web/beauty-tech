@@ -82,6 +82,15 @@
     }
 }
 
+
+@media(max-width: 700px) {
+    .content {
+        &__wrapper {  
+            padding: 40px 0px 40px 50px;
+        }
+    }
+}
+
 @media(max-width: 480px) {
     .content {
         margin-bottom: 40px;

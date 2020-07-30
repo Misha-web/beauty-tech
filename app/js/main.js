@@ -7,13 +7,16 @@ burgerMenu.addEventListener("click", function() {
     bodyLock.classList.toggle('lock');
 });
 
-window.onscroll = () => {
-    const navFixed = document.querySelector('.nav');
-    const navSctoll = window.scrollY;
-    if (navSctoll > 70) {
+const navFixed = document.querySelector('.nav');
+window.addEventListener('scroll',()=>{
+    if  (window.pageYOffset > 50){
+        navFixed.classList.add('fade');
+    }
+   
+    if  (window.pageYOffset > 100){
         navFixed.classList.add('fixed');
-    } else if (navSctoll < 10) {
+    }
+    else{
         navFixed.classList.remove('fixed')
     }
-}
-
+})
